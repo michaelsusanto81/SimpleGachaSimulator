@@ -66,7 +66,8 @@ class GachaSimulator {
       totalFiveStars: total,
       featuredCount: featured,
       offBannerCount: offBanner,
-      featuredWinRate: winRate + '%'
+      featuredWinRate: winRate + '%',
+      totalWishes: this.results.length,
     };
   }
 }
@@ -96,14 +97,17 @@ const sim = new GachaSimulator();
 
 const bannerIntro = document.getElementById('banner-intro');
 const bannerWish = document.getElementById('banner-wish');
+const bannerSummary = document.getElementById('banner-summary');
 const buttonWish1 = document.getElementById('button-wish-1');
 const buttonWish10 = document.getElementById('button-wish-10');
+const buttonSummary = document.getElementById('button-summary');
 const pityCounter = document.getElementById('pity-counter')
 const bannerCardsContainer = document.getElementById('banner-cards');
 
 buttonWish1.addEventListener('click', function(e) {
-	bannerIntro.style.display = 'none';
+	bannerIntro.style.display = 'none';	
 	bannerWish.style.display = 'block';
+	bannerSummary.style.display = 'none';
 	removeDOMChildren(bannerCardsContainer);
 
 	const res = sim.pull();
@@ -115,8 +119,9 @@ buttonWish1.addEventListener('click', function(e) {
 });
 
 buttonWish10.addEventListener('click', function(e) {
-	bannerIntro.style.display = 'none';
+	bannerIntro.style.display = 'none';	
 	bannerWish.style.display = 'block';
+	bannerSummary.style.display = 'none';
 	removeDOMChildren(bannerCardsContainer);
 
 	const res = sim.multiPull();
@@ -127,4 +132,25 @@ buttonWish10.addEventListener('click', function(e) {
 	};
 
 	pityCounter.innerHTML = 'Pity counter: ' + sim.fiveStarPity;
+});
+
+buttonSummary.addEventListener('click', function(e) {
+	bannerIntro.style.display = 'none';	
+	bannerWish.style.display = 'none';
+	bannerSummary.style.display = 'block';
+	removeDOMChildren(bannerCardsContainer);
+
+	const res = sim.getFiveStarStats();
+
+	const totalFiveStarsText = '<strong>Total Five Stars</strong>: ' + res.totalFiveStars;
+	const featuredCountText = '<strong>Total Win</strong>: ' + res.featuredCount;
+	const offBannerCountText = '<strong>Total Lose</strong>: ' + res.offBannerCount;
+	const featuredWinRateText = '<strong>Win Rate</strong>: ' + res.featuredWinRate;
+	const totalWishesText = '<strong>Total Wishes</strong>: ' + res.totalWishes;
+
+	document.getElementById('totalFiveStars').innerHTML = totalFiveStarsText;
+	document.getElementById('featuredCount').innerHTML = featuredCountText;
+	document.getElementById('offBannerCount').innerHTML = offBannerCountText;
+	document.getElementById('featuredWinRate').innerHTML = featuredWinRateText;
+	document.getElementById('totalWishes').innerHTML = totalWishesText;
 });

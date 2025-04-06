@@ -23,6 +23,10 @@ footer  {
 	display: none;
 }
 
+#banner-summary {
+	display: none;
+}
+
 .title {
     font-size: 3rem;
     text-align: center;
