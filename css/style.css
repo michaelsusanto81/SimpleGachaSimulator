@@ -1,0 +1,171 @@
+/* Apply the adjusted darker pastel gradient background to the entire page */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to right, #7fa3c7, #d08db6); /* Darker pastel blue to darker pastel purple */
+    font-family: Arial, sans-serif;
+    color: white; /* Make all text white */
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Style all text with white color and light stroke */
+* {
+    color: white; /* Make all text white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Light text stroke effect */
+}
+
+h1 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+footer  {
+    margin-top: 32px;
+    font-weight: bold;
+}
+
+.banner {
+    background-color: white;
+    width: 120vh;
+    border-radius: 4px;
+    box-shadow: 10px 10px #888888;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.banner-title {
+	color: #454545;
+	text-shadow: none;
+	text-align: center;
+	font-weight: bold;
+}
+
+.banner-cards {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.banner-card {
+	border-radius: 10px; /* Rounded corners */
+	margin: 2px;
+    padding: 8px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition on hover */
+    text-align: center; /* Center text inside the card */
+}
+
+.banner-card:hover {
+	transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+/* Gold Themed Card */
+.banner-card.gold {
+    background: linear-gradient(145deg, #d4af37, #f1c232); /* Gold gradient background */
+    color: white; /* White text */
+    border: 1px solid #c79e2f; /* Gold border */
+}
+
+.banner-card.gold:hover {    
+    background: linear-gradient(145deg, #f1c232, #d4af37); /* Lighter gold gradient on hover */
+}
+
+/* Purple Themed Card */
+.banner-card.purple {
+    background: linear-gradient(145deg, #8e44ad, #9b59b6); /* Purple gradient background */
+    color: white; /* White text */
+    border: 1px solid #7d3c98; /* Purple border */
+}
+
+.banner-card.purple:hover {
+    background: linear-gradient(145deg, #9b59b6, #8e44ad); /* Lighter purple gradient on hover */
+}
+
+/* Blue Themed Card */
+.banner-card.blue {
+    background: linear-gradient(145deg, #3498db, #2980b9); /* Blue gradient background */
+    color: white; /* White text */
+    border: 1px solid #2471a3; /* Blue border */
+}
+
+.banner-card.blue:hover {
+    background: linear-gradient(145deg, #2980b9, #3498db); /* Lighter blue gradient on hover */
+}
+
+.banner-actions {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 16px auto;
+}
+
+.button-action {
+    background-color: #8ca8c9; /* Darker pastel blue background */
+    color: white; /* White text */
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+    padding: 12px 24px; /* Padding for better button size */
+    border: none; /* Remove default border */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition on hover and focus */
+    cursor: pointer; /* Make the cursor a pointer when hovering over the button */
+    margin: 12px 16px;
+}
+
+.button-action-secondary {
+    background-color: white; /* Darker pastel blue background */
+    color: #7A4C9C; /* White text */
+    font-size: 1.1rem; /* Slightly larger font for better readability */
+    padding: 12px 24px; /* Padding for better button size */
+    border: 1px solid #7A4C9C; /* Remove default border */
+    border-radius: 12px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition on hover and focus */
+    cursor: pointer; /* Make the cursor a pointer when hovering over the button */
+    margin: 12px 16px;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+.button-action:hover {
+    background-color: #7d94b7; /* Slightly darker pastel blue on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+    transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+.button-action:active {
+    background-color: #6a7f97; /* Even darker pastel blue on active press */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Default shadow when pressed */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+.button-action:focus {
+    outline: none; /* Remove default focus outline */
+    border: 2px solid #557ea6; /* Add a blue border on focus */
+}
+
+.button-action-secondary:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Slightly darker shadow on hover */
+    transform: translateY(-2px); /* Lift the button slightly on hover */
+}
+
+.button-action-secondary:active {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Default shadow when pressed */
+    transform: translateY(0); /* Reset lift effect */
+}
+
+.button-action-secondary:focus {
+    outline: none; /* Remove default focus outline */
+    border: 2px solid #557ea6; /* Add a blue border on focus */
+}
+
