@@ -13,20 +13,21 @@ body {
     align-items: center;
 }
 
-/* Style all text with white color and light stroke */
-* {
-    color: white; /* Make all text white */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Light text stroke effect */
-}
-
-h1 {
-    font-size: 3rem;
-    text-align: center;
-}
-
 footer  {
     margin-top: 32px;
     font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Light text stroke effect */
+}
+
+#banner-wish {
+	display: none;
+}
+
+.title {
+    font-size: 3rem;
+    text-align: center;
+    color: white; /* Make all text white */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5), 0 0 15px rgba(0, 0, 0, 0.3); /* Light text stroke effect */
 }
 
 .banner {
@@ -45,6 +46,13 @@ footer  {
 	text-shadow: none;
 	text-align: center;
 	font-weight: bold;
+	margin-bottom: 32px;
+}
+
+.banner-subtitle {
+	color: #454545;
+	text-shadow: none;
+	text-align: center;
 }
 
 .banner-cards {
@@ -58,7 +66,6 @@ footer  {
 	border-radius: 10px; /* Rounded corners */
 	margin: 2px;
     padding: 8px;
-    width: 300px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
     transition: all 0.3s ease; /* Smooth transition on hover */
     text-align: center; /* Center text inside the card */
@@ -100,6 +107,14 @@ footer  {
 
 .banner-card.blue:hover {
     background: linear-gradient(145deg, #2980b9, #3498db); /* Lighter blue gradient on hover */
+}
+
+.pity-counter {
+	color: #454545;
+	text-shadow: none;
+	text-align: center;
+	font-weight: bold;
+	margin-bottom: 0;
 }
 
 .banner-actions {
